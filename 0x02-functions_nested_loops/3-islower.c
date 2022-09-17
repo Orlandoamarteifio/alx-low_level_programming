@@ -15,7 +15,7 @@ for (i = 'a'; i <= 'z'; i++)
 /* refer int c*/
 if (c == i)
 {
-return (i);
+return (1);
 }
 }
 return (0);
