@@ -14,8 +14,6 @@ char *aux = dest;
 
 while (*src)
 *dest++ = *src++;
-return (aux);
-}
-
 return (dest);
 }
+
