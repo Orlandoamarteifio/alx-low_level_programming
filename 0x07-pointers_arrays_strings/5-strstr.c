@@ -38,7 +38,7 @@ return (haystack + i);
 }
 }
 
-i++
+i++;
 }
 
 return (NULL); /* No match */
