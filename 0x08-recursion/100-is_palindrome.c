@@ -12,7 +12,7 @@ if (i < len && str[i] == str[len])
 return (palindromeChecker(str, len - 1, i + 1));
 if (str[i] != str[len])
 return (0);
-return (1); 
+return (1);
 }
 /**
  * _strlen_recursion - returns the length of a string
