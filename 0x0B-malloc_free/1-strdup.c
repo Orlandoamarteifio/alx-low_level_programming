@@ -1,43 +1,70 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
- * _strdup - A function that returns a pointer to a newly allocated
- * space in memory, which contains a copy of the string given as a
- * parameter.
- * @str: An input pointer of the string to copy.
- * Return: Apointer to new string or NULL if it str is NULL
+ *_strlen - count array
+ *@s: array of elements
+ *Return: 1
  */
+
+int _strlen(char *s)
+{
+unsigned int i;
+
+i = 0;
+while (s[i] != '\0') /*count character of string*/
+{
+i++;
+}
+
+return (i);
+}
+
+/**
+ *_strcpy - copy arrays
+ *@src: array of elements
+ *@dest: dest array
+ *Return: dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+int i = 0;
+
+while (src[i] != '\0')
+{
+dest[i] = src[i];
+i++;
+}
+dest[i] = '\0';
+
+return (dest);
+}
+
+/**
+ *_strdup - array for prints a string
+ *@str: array of elements
+ *Return: pointer
+ */
+
 char *_strdup(char *str)
 {
-char *new_str, *start;
-int i = 0, len = 0;
+char *dst;
+unsigned int size;
 
-if (str == NULL)
+if (str == 0)
+{
 return (NULL);
-
-start = str;
-
-while (*str)
-{
-len++;
-str++;
 }
 
-str = start;
-new_str = malloc(sizeof(char) * (len + 1));
-start = new_str;
+size = _strlen(str) + 1;
 
-if (new_str != NULL)
+dst = (char *) malloc(size * sizeof(char));
+
+if (dst == 0)
 {
-for (; i < len; i++)
-{
-new_str[i] = *str;
-str++;
-}
-new_str[i] = '\0';
-return (start);
-}
-else
 return (NULL);
+}
+
+_strcpy(dst, str);
+return (dst);
 }
