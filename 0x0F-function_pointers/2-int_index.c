@@ -19,7 +19,7 @@ if (size <= 0)
 return (-1);
 
 for (; i < size; i++)
-if (cmp(array[i]) !=0)
+if (cmp(array[i]) ! = 0)
 return (i);
 
 if (i == size)
