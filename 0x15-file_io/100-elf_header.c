@@ -1,13 +1,13 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- * @argc: count
- * @argv: arguments
- * Return: Always 0.
+ * main - The entry point for program to get header of ELF file
+ * @argc: The number of arguments
+ * @argv: The pointer to array of arguments
+ * Return: 1 on success, error code on failure
  */
-
-int main (int argc, char argv[])
+int main(int argc, char *argv[])
 {
-
+printf("argc:%d, argv:%p\n", argc, (void *)*argv);
+return (1);
 }
